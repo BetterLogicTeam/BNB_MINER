@@ -1,0 +1,63 @@
+.head-img{
+    width: 50%;
+}
+
+.navbar-brand{
+    width: 75%;
+}
+
+.head-btn{
+    background:linear-gradient(90deg,#539600 0,#6bbf44 51%,#539600);
+}
+
+.wallet_conent_modal{
+    width: 100%;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 0.5em;
+    color: rgb(12, 12, 13);
+}
+
+.offcanvas-btn{
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.wallate_img{
+    height: 40px !important;
+    width: 40px !important;
+}
+
+.modal_name .modal-header{
+    border-top: none !important;
+    border-bottom: none !important;
+
+}
+
+.modal_name .modal-content{
+    border-radius: 15px !important;
+}
+
+.wallet_subtext{
+    width: 100%;
+    font-size: 18px;
+    margin: 0.333em 0px;
+    color: rgb(169, 169, 188);
+}
+
+
+
+@media screen and (min-width:770px) and (max-width:1440px) {
+    .offcanvas{
+        display: none !important;
+    }
+
+   
+}
+
+
+/* @media only screen and (max-width:600px){
+    .responive_only{
+        display: block;
+    }
+} */

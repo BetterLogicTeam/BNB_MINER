@@ -1,0 +1,18 @@
+.liso-img{
+    width: 4%;
+}
+
+
+
+@media screen and (max-width:500px) {
+
+    .bnb{
+        font-size: 1rem;
+    }
+    .liso {
+        font-size: 1rem;
+    }
+    .liso-img{
+        width: 5%;
+    }
+}

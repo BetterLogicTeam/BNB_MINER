@@ -1,0 +1,12 @@
+body {
+    background-image: url(../src/assets/dark.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+  
+  
