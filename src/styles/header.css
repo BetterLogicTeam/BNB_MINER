@@ -45,6 +45,15 @@
     color: rgb(169, 169, 188);
 }
 
+.wallet_bttn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bnb_chain{
+    cursor: pointer;
+}
 
 
 @media screen and (min-width:770px) and (max-width:1440px) {

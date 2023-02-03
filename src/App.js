@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router,Routes,Route, } from "react-router-dom";
 import Header from "./components/Header";
 import Player from "./components/Player";
@@ -13,15 +13,18 @@ import './styles/header.css';
 
 function App() {
 
+  const [address,setaddress]=useState(null);  
+  console.log("App",address);
+
   return (
     <Router>
       <Routes>
         <Route path="" />
       </Routes>
-    <Header />
+    <Header address={address} setaddress={setaddress}/>
     <Player />
-    <Middle />
-     <Footer />
+    <Middle address={address}/>
+     <Footer address={address}/>
     </Router>
   );
 }

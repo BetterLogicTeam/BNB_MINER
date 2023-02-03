@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
-const Footer = () => {
+const Footer = ({address}) => {
+
+  const [refearal, setrefearal] = useState("");
+  const [clipboard, setclipboard] = useState(false);
+  const [value, setvalue] = useState({address});
+
   return (
     <Container className="mt-5 text-dark ftr">
     
      <Row className="">
         <Col lg={6} md={12}>
+        <CopyToClipboard text={value}
+          onCopy={() => setclipboard(true)}>
+          <button>{address}</button>
+        </CopyToClipboard>
+        {clipboard ? <span style={{color: 'red'}}>Copied.</span> : null}
             <div className='rounded ftr-back'>
                 <div className='ftr-para' style={{padding: '1rem', paddingBottom:'2.5rem'}}>
           <div className="card-title">Sustainability:</div>

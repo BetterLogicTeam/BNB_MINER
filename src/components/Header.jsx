@@ -5,9 +5,12 @@ import { FaLink } from 'react-icons/fa';
 // import {BsMoon,BsSun} from 'react-icons/bs';
 import { MdLegendToggle } from 'react-icons/md';
 import Connect_wallet from './Connect_wallet';
+import { loadWeb3 } from '../apis/api';
 
 
-const Header = () => {
+const Header = ({address,setaddress}) => {
+
+  let [btnTxt, setBtTxt] = useState("Connect");
 
   const [show, setShow] = useState(false);
 
@@ -24,10 +27,11 @@ const Header = () => {
             <img className='head-img' src={head} alt="bnbminer" /></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link>
-            <Button className='head-btn d-lg-block d-none outline-none' onClick={() => setModalShow(true)}><FaLink /> Connect Wallet</Button></Nav.Link>
+            <Button className='head-btn d-lg-block d-none outline-none' onClick={() => setModalShow(true)}><FaLink /> {btnTxt}</Button></Nav.Link>
             <Nav.Link>
             <Connect_wallet
         show={modalShow}
+        btnTxt={btnTxt} setBtTxt={setBtTxt} setaddress={setaddress} address={address}
         onHide={() => setModalShow(false)}
       />
             
@@ -42,7 +46,7 @@ const Header = () => {
               </Offcanvas.Header>
               <Offcanvas.Body >
                 <h6 className='text-center' onClick={() => setModalShow(true)}>
-                  <a className='text-decoration-none text-dark d-block d-md-none' href="#">Connect Wallet</a>
+                  <a className='text-decoration-none text-dark d-block d-md-none' href="#"></a>
                 </h6>
                 <br />
                 <div>

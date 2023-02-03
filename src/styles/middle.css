@@ -16,3 +16,9 @@
         width: 5%;
     }
 }
+
+.bttn_spinner{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
